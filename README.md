@@ -8,6 +8,11 @@ This project was built as part of the **Frontend Intern Task** for **MyDataNinja
 
 ---
 
+### Screenshot
+
+![](./public//Screenshot%201.png)
+![](./public//Screenshot%202.png)
+
 ## 📌 Features
 
 ✅ Fully responsive landing page  
