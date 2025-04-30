@@ -12,9 +12,9 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center mt-48">
+    <div className="flex flex-col justify-center items-center mt-48 ">
       <h1 className="text-5xl">User Success Stories</h1>
-      <div className="flex mt-10 justify-center gap-3 items-center ">
+      <div className="flex flex-col mt-10 justify-center gap-3 items-center md:flex-row ">
         {testimonials.img.map((image, i) => (
           <div key={i} className="relative w-72 h-72 mx-auto">
             {/* Rounded image */}

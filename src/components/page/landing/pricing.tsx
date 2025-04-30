@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+
 const Pricing = () => {
   const pricing = {
     plan: ["Starter", "Pro", "Enterprise"],
@@ -57,13 +59,13 @@ const Pricing = () => {
                 {pricing.desc[index]}
               </p>
             </div>
-            <button
+            <Button
               className={`${
                 plan === "Pro" ? "bg-green-600" : "bg-gray-700"
-              } text-white w-full py-3 mt-auto rounded-md font-semibold`}
+              } text-white w-full py-3 mt-auto rounded-md font-semibold hover:cursor-pointer`}
             >
               {plan === "Enterprise" ? "Contact Sales" : "Get Started"}
-            </button>
+            </Button>
           </div>
         ))}
       </div>

@@ -1,19 +1,52 @@
-import Logo from "../assets/datapilot_logo-removebg-preview.png";
+import Logo from "@/assets/logo.png";
 import { ModeToggle } from "./mode-toggle";
 import { Button } from "./ui/button";
+import { Menu } from "lucide-react";
 
-const header = () => {
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "./ui/dropdown-menu";
+
+const Header = () => {
   return (
-    <div className="flex justify-between items-center pl-5 pr-5 z-50 dark:bg-black  overflow-hidden  sticky top-0 left-0 w-full   bg-white shadow-[0px_-2px_4px_rgba(0,0,0,0.1)] border-solid border-b border-b-gray-300 dark:border-b-solid dark:border-b-neutral-800">
-      <div className="">
+    <header
+      className="flex justify-between items-center px-6 py-4 z-50 sticky top-0 w-full 
+      bg-transparent backdrop-blur-xl shadow-[0px_-2px_4px_rgba(0,0,0,0.1)]"
+    >
+      <div>
         <img src={Logo} alt="Datapilot Logo" className="w-52" />
       </div>
-      <div className="flex gap-2">
-        <Button>Sign In</Button>
+
+      {/* Desktop navigation */}
+      <div className="hidden md:flex gap-4 items-center">
+        <Button className="dark:text-white px-5">Sign In</Button>
         <ModeToggle />
       </div>
-    </div>
+
+      {/* Mobile dropdown menu */}
+      <div className="md:hidden flex items-center gap-2">
+        <ModeToggle />
+
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <button className="focus:outline-none">
+              <Menu size={28} />
+            </button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end" className="w-40">
+            <DropdownMenuItem asChild>
+              <Button className="w-full justify-start px-2 text-sm dark:text-white">
+                Sign In
+              </Button>
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
+    </header>
   );
 };
 
-export default header;
+export default Header;

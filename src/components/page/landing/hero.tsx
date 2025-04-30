@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import baner from "@/assets/baner.jpg";
+import Star from "../svgs/star";
 
 const Hero = () => {
   return (
@@ -23,8 +24,11 @@ const Hero = () => {
             business data — all in one intuitive platform. Make smarter
             decisions, faster.
           </p>
-          <Button className="text-white text-xl px-6 py-2 hover:cursor-pointer p-8">
+          <Button className="group text-white text-xl px-6 py-2 hover:cursor-pointer p-8 flex items-center gap-2">
             Get Started
+            <span className="transition-transform duration-500 group-hover:rotate-180">
+              <Star />
+            </span>
           </Button>
         </div>
       </div>

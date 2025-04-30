@@ -10,8 +10,8 @@ const footer = () => {
     setEmail(""); // Clear input after submission
   };
   return (
-    <div className=" bg-gray-100 w-full pt-28">
-      <div className="flex justify-around items-center ">
+    <div className="bg-gray-100 w-full pt-28 dark:bg-gray-700">
+      <div className="flex flex-col md:flex-row justify-around items-center pl-20 pr-20 ">
         <div>
           <h1 className="text-4xl pb-4">Join Our Newsletter</h1>{" "}
           <p>
@@ -19,10 +19,10 @@ const footer = () => {
             spam.
           </p>
         </div>
-        <div className=" flex  items-center py-12">
+        <div className="flex items-center py-12  w-full justify-end">
           <form
             onSubmit={handleSubscribe}
-            className="flex flex-col sm:flex-row p-6 w-full  max-w-xl"
+            className="flex flex-col md:flex-row p-6 w-full md:w-md md:rounded-4xl"
           >
             <input
               type="email"
@@ -30,12 +30,15 @@ const footer = () => {
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="flex-1 px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 shadow-md focus:ring-blue-500"
+              className="flex-1 px-4 py-2 border border-gray-300 rounded-3xl md:rounded-r-none focus:outline-none focus:ring-2 shadow-md focus:ring-blue-500 "
             />
             <button
               type="submit"
-              className="px-6 py-2 bg-blue-600 text-white rounded-r-md hover:bg-blue-700 transition"
+              className="relative px-6 py-2 bg-blue-600 text-white md:rounded-l-none rounded-3xl  hover:bg-blue-700 transition hover:cursor-pointer mt-3 md:mt-0"
             >
+              <span className="ping ">
+                <div className="w-3 h-3 bg-purple-500 absolute top-2 right-2 rounded-4xl"></div>
+              </span>
               Subscribe
             </button>
           </form>
@@ -47,7 +50,7 @@ const footer = () => {
         <div className="flex justify-center space-x-6">
           {/* Facebook Link */}
           <a
-            href="https://www.facebook.com"
+            href="https://www.facebook.com/teona.omiadze.75"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -74,7 +77,7 @@ const footer = () => {
 
           {/* linkedin Link */}
           <a
-            href="https://twitter.com"
+            href="https://www.linkedin.com/in/teona-omiadze/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -94,7 +97,7 @@ const footer = () => {
 
           {/* Instagram Link */}
           <a
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/teoomiadzee/"
             target="_blank"
             rel="noopener noreferrer"
           >
