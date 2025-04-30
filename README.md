@@ -1,54 +1,64 @@
-# React + TypeScript + Vite
+# DataPilot – Responsive SaaS Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project was built as part of the **Frontend Intern Task** for **MyDataNinja**. The goal was to create a clean, modern, and fully responsive landing page for a fictional SaaS product called **DataPilot**.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+👉 [View the site on Netlify](https://datapilotmydataninja.netlify.app/)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📌 Features
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+✅ Fully responsive landing page  
+✅ Built with React and Tailwind CSS  
+✅ Form validation using `react-hook-form` + `zod`  
+✅ Client-side routing with `react-router-dom`  
+✅ Mobile-friendly layout  
+✅ Includes:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Hero Section with a "Get Started" button
+- Features Section (3 features with icons)
+- Testimonials Section (2 testimonials)
+- Pricing Section (3 pricing plans)
+- Footer with social media
+- **BONUS**: Login and Registration forms with validation
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## ⚙️ Tech Stack
+
+- **React** (via Vite)
+- **Tailwind CSS**
+- **React Router DOM**
+- **React Hook Form**
+- **Zod** (for schema-based validation)
+- **TypeScript**
+
+---
+
+## 🛠️ Setup & Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Omiadze/Frontend-Intern-Task-for-MyDataNinja.git
+
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd Frontend-Intern-Task-for-MyDataNinja
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+# Author
+
+Hi, my name is Teo and I am a front-end developer🚀
