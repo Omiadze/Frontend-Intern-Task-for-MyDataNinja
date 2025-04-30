@@ -44,10 +44,15 @@ const Header = () => {
             </button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end" className="w-40">
-            <DropdownMenuItem asChild>
-              <Button className="w-full justify-start px-2 text-sm dark:text-white">
-                Sign In
-              </Button>
+            <DropdownMenuItem
+              asChild
+              className="flex justify-center items-center"
+            >
+              <Link className="" to="/login">
+                <Button className="dark:text-white px-5 hover:cursor-pointer">
+                  Sign In
+                </Button>
+              </Link>
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
