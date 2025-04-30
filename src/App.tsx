@@ -1,15 +1,27 @@
+import { lazy, Suspense } from "react";
 import "./App.css";
-import Footer from "./components/footer";
+import Loader from "./components/loader";
+import { Route, Routes } from "react-router-dom";
+import Layout from "./layout";
+import NotFoundPage from "./page/404";
 
-import Header from "./components/header";
-import Landing from "./components/page/landing";
+const LazyLandingView = lazy(() => import("./page/landing/index"));
+const LazyLoginPage = lazy(() => import("./page/login/index"));
+const LazyRegisterPage = lazy(() => import("./page/registration/index"));
 
 function App() {
   return (
     <>
-      <Header />
-      <Landing />
-      <Footer />
+      <Suspense fallback={<Loader />}>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<LazyLandingView />} />
+            <Route path="signUp" element={<LazyRegisterPage />} />{" "}
+            <Route path="login" element={<LazyLoginPage />} />{" "}
+          </Route>
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </Suspense>
     </>
   );
 }

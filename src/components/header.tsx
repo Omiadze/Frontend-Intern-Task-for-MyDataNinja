@@ -9,6 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -17,12 +18,18 @@ const Header = () => {
       bg-transparent backdrop-blur-xl shadow-[0px_-2px_4px_rgba(0,0,0,0.1)]"
     >
       <div>
-        <img src={Logo} alt="Datapilot Logo" className="w-52" />
+        <Link className="hover:cursor-pointer" to="/">
+          <img src={Logo} alt="Datapilot Logo" className="w-52" />
+        </Link>
       </div>
 
       {/* Desktop navigation */}
       <div className="hidden md:flex gap-4 items-center">
-        <Button className="dark:text-white px-5">Sign In</Button>
+        <Link className="" to="/login">
+          <Button className="dark:text-white px-5 hover:cursor-pointer">
+            Sign In
+          </Button>
+        </Link>
         <ModeToggle />
       </div>
 
